@@ -1,0 +1,467 @@
+{
+  "passages": [
+    {
+      "id": "P_B1",
+      "level": "B1",
+      "topic": "a volunteer repair café in a small town, and the local shop that objects to it",
+      "title": "The Repair Café and the Shopkeeper's Concern",
+      "text": "In the small town of Millbrook, a group of volunteers started a 'Repair Café' last spring. Every Saturday afternoon, people bring broken items—like toasters, lamps, or torn clothes—to the community hall. Volunteers with different skills, such as fixing electronics or sewing, help residents repair the items instead of throwing them away. So far, they have fixed more than 300 items, saving hundreds of pounds in waste disposal costs for the town. The Repair Café’s success has brought the local community closer together.\n\nThe idea behind the Repair Café is to reduce waste and encourage people to reuse what they already own. By repairing rather than replacing, residents save money and reduce their environmental impact. The café also offers a friendly space where people share stories and skills. For many in Millbrook, it has become a weekly highlight and a practical way to manage household items without buying new.\n\nHowever, not everyone is happy about the Repair Café. Ms. Eleanor Whitmore, who owns the “Everything Store” on the main street, has voiced her opposition. She claims that fewer people are buying new household goods from her shop because they are fixing old ones instead. She points to a drop in sales of small appliances over the past six months and blames the café for her reduced profits. Ms. Whitmore has even written a letter to the town council, asking them to reconsider the café’s permit.\n\nTown councilor James Carter acknowledges the shopkeeper’s concerns but emphasizes that the café was created to benefit the community and the environment. He notes that the council has received many positive comments from residents about the Repair Café. While it is true that some shopkeepers might see a short-term drop in sales, Carter believes the café promotes long-term sustainability and community spirit. The council is reviewing the situation carefully but has no immediate plans to close the Repair Café."
+    },
+    {
+      "id": "P_B2",
+      "level": "B2",
+      "topic": "an island community choosing between a bridge to the mainland and a new ferry",
+      "title": "The Crossroads of the Isle of Meridian",
+      "text": "The Isle of Meridian, a speck of land nestled in the azure embrace of the Northern Sea, has long been a bastion of self-sufficiency. With a population of just over 2,500 residents, the island's economy thrives on a delicate balance of fishing, horticulture, and tourism. For decades, the only connection to the mainland has been the weekly ferry service operated by Meridian Lines. However, as the island grapples with its future, the debate over whether to construct a bridge to the mainland or to invest in a new, state-of-the-art ferry service has ignited passionate discourse across its quaint, cobblestoned villages.\n\nProponents of the bridge argue that a fixed link would usher in unprecedented economic growth. They point to studies suggesting that businesses on the island could expand their operations significantly, attracting mainland investors eager for the island's unique charm and natural beauty. Moreover, they highlight the potential for a reduction in travel time from over two hours by ferry to just fifteen minutes by bridge, a change they believe would dramatically boost tourism numbers. The construction of the bridge, they argue, would also provide a reliable lifeline in adverse weather conditions, which have often disrupted ferry schedules and isolated islanders.\n\nConversely, those advocating for the new ferry emphasize the environmental and cultural preservation that comes with maintaining the island's isolation. Local historian, Eleanor Finch, passionately contends that a bridge would irrevocably alter the island's character and strain its pristine ecosystem. She cites the island's thriving marine biodiversity and the charm of arriving by sea as irreplaceable assets. Furthermore, Ferry Advocates, a community group, estimate that upgrading the ferry service would cost roughly half the price of building a bridge, freeing up funds for other essential services like healthcare and education. They also warn that increased accessibility might lead to overdevelopment, threatening the tranquil lifestyle cherished by many islanders.\n\nAs the islanders prepare to vote on the matter next month, the quiet hum of debate continues to resonate through the island's cottages and community halls. While one side envisions a future of prosperity and connectivity, the other sees a premonition of change that could dilute the very essence of island life. It is a debate not just about infrastructure, but about identity and the delicate balance between progress and preservation. Whatever decision is made, it will undoubtedly shape the future of the Isle of Meridian, leaving an indelible mark on its residents and their way of life."
+    },
+    {
+      "id": "P_C1",
+      "level": "C1",
+      "topic": "an opinion piece arguing that 'quiet hours' in open-plan offices treat a symptom, not the cause",
+      "title": "The Illusion of Quiet in Open-Plan Offices",
+      "text": "Open-plan office designs, once heralded as engines of collaboration and transparency, now dominate corporate landscapes worldwide. According to a 2019 study by Oxford Economics, over 70% of U.S. office employees now work in some form of open environment, a figure mirrored in major European cities like London and Berlin. Yet, despite this ubiquity, employee satisfaction and productivity metrics have not correspondingly soared—instead, they remain stubbornly flat or, in many cases, diminished. The response from management has been predictably reflexive: introduce 'quiet hours,' designated times during which conversation is curtailed and headphones become mandatory. These interventions treat the symptom of auditory distraction rather than interrogating the root cause: the architectural and cultural failure to design human-centred workspaces.\n\nThe premise of quiet hours is seductive in its simplicity. By restricting background noise, proponents argue, cognitive tasks requiring deep focus—such as coding, writing, or financial modeling—can proceed unimpeded. Indeed, research by Dr. Orfield’s team at the University of California, Irvine, demonstrated that even moderate background noise (around 60 decibels) can impair reading comprehension and memory performance. However, the problem is not merely decibel level; it is the unpredictability and semantic content of speech that disrupt working memory. Open-plan offices are not just acoustically leaky—they are semantically invasive. A snippet of a sales pitch or a casual joke can shatter immersion far more effectively than ambient hum. Therefore, enforcing silence for three hours a day does not resolve the underlying issue: the absence of spatial control over one’s cognitive environment.\n\nMoreover, the data from post-implementation reviews in companies like Buffer and HubSpot reveal a troubling paradox. While employees report short-term relief during quiet hours, overall stress levels have not decreased. In fact, a longitudinal study by Steelcase revealed that workers in open environments experienced 19% more unplanned interactions per day compared to those in private offices, leading to cognitive overload and reduced task persistence. The quiet hour, in this context, becomes a symbolic concession—an admission of failure disguised as a solution. It acknowledges that the environment is hostile to focus, yet refuses to redesign it. By mandating silence rather than creating acoustic or spatial boundaries, organizations externalize the cost of poor design onto employees’ time management and emotional resilience.\n\nWhat remains unspoken but implicit throughout these dynamics is a critique of managerial hubris: the belief that culture can override design, that willpower can compensate for environmental inadequacy. The quiet hour is not merely an ineffective remedy; it is a managerial sleight of hand. It allows leadership to claim they have addressed employee well-being without confronting the inconvenient truth—that the very architecture of modern work is at odds with the cognitive demands of knowledge economies. To truly improve outcomes, firms must reconsider the physical and psychological boundaries of work, not just regulate the volume of conversation within them."
+    }
+  ],
+  "items": [
+    {
+      "id": "P_B1-FR-1",
+      "passage": "P_B1",
+      "cat": "FR",
+      "level": "B1",
+      "question": "What is the main goal of the Repair Café in Millbrook?",
+      "options": {
+        "A": "To attract tourists to Millbrook by promoting unique community activities.",
+        "B": "To increase sales at local stores by encouraging residents to buy new products.",
+        "C": "To reduce waste and promote reusing household items.",
+        "D": "To replace the town’s waste disposal system with a volunteer-run recycling program."
+      },
+      "correct": "C",
+      "score": 10,
+      "explanation": "The main goal of the Repair Café is to reduce waste and promote reusing household items because the text explicitly states, 'The idea behind the Repair Café is to reduce waste and encourage people to reuse what they already own.' This directly supports the correct answer, showing that the café's purpose is centered on sustainability through repair rather than disposal."
+    },
+    {
+      "id": "P_B1-INF-1",
+      "passage": "P_B1",
+      "cat": "INF",
+      "level": "B1",
+      "question": "What is the main reason the Repair Café was started?",
+      "options": {
+        "A": "To help local shopkeepers increase their sales by promoting repairs instead of new purchases.",
+        "B": "To reduce waste and encourage reuse of items.",
+        "C": "To replace the town’s recycling program with a system of in-person repairs.",
+        "D": "To train young people in professional repair jobs for future careers."
+      },
+      "correct": "B",
+      "score": 10,
+      "explanation": "The main reason the Repair Café was started is to reduce waste and encourage reuse of items, as directly stated in the text: 'The idea behind the Repair Café is to reduce waste and encourage people to reuse what they already own.' This purpose is further supported by the fact that the café helps residents repair broken items instead of throwing them away, which saves money and reduces environmental impact."
+    },
+    {
+      "id": "P_B1-INT-1",
+      "passage": "P_B1",
+      "cat": "INT",
+      "level": "B1",
+      "question": "Why might some shopkeepers see a short-term drop in sales due to the Repair Café?",
+      "options": {
+        "A": "Because people are fixing old items instead of buying new ones.",
+        "B": "Because the café charges high fees for repairs, making new items seem cheaper.",
+        "C": "Because the café discourages people from shopping by hosting events on weekends.",
+        "D": "Because the café sells new household goods at lower prices than local shops."
+      },
+      "correct": "A",
+      "score": 10,
+      "explanation": "The correct answer is right because the text states that people are bringing broken items to the Repair Café to be fixed instead of replacing them, which reduces the need to buy new household goods. This is directly supported by the evidence: 'fewer people are buying new household goods from her shop because they are fixing old ones instead.' This shows that the shift from buying new to repairing old items leads to a short-term drop in sales for shopkeepers."
+    },
+    {
+      "id": "P_B1-CRIT-1",
+      "passage": "P_B1",
+      "cat": "CRIT",
+      "level": "B1",
+      "question": "How effective is the ending in showing the conflict's resolution?",
+      "options": {
+        "A": "It resolves the conflict by forcing the café to stop operating on Saturdays.",
+        "B": "It resolves the conflict by granting the shopkeeper’s request to close the café.",
+        "C": "It resolves the conflict by proving the café caused significant harm to local businesses.",
+        "D": "It shows no immediate closure, leaving the issue open."
+      },
+      "correct": "D",
+      "score": 10,
+      "explanation": "The correct answer is right because the text states, 'The council is reviewing the situation carefully but has no immediate plans to close the Repair Café,' which shows that the conflict has not been resolved and the café remains open for now. This evidence demonstrates that the ending does not provide a definitive resolution, instead leaving the issue unresolved and open for future consideration."
+    },
+    {
+      "id": "P_B2-INF-1",
+      "passage": "P_B2",
+      "cat": "INF",
+      "level": "B2",
+      "question": "What can be inferred about the islanders' priorities based on the debate?",
+      "options": {
+        "A": "They are united in their desire to eliminate the ferry service in favor of a faster, more modern connection to the mainland.",
+        "B": "They believe that environmental concerns are irrelevant compared to the benefits of improved transportation.",
+        "C": "They prioritize economic growth above all else, as shown by their support for the bridge proposal.",
+        "D": "They value preserving their way of life over rapid development."
+      },
+      "correct": "D",
+      "score": 10,
+      "explanation": "The islanders' priorities are reflected in the strong emphasis on maintaining the island's isolation and natural beauty, as highlighted by local historian Eleanor Finch, who warns that a bridge would 'irrevocably alter the island's character and strain its pristine ecosystem.' This concern for environmental and cultural preservation, coupled with the Ferry Advocates' argument that increased accessibility could lead to 'overdevelopment' threatening the 'tranquil lifestyle cherished by many islanders,' shows that they value their traditional way of life over rapid economic growth."
+    },
+    {
+      "id": "P_B2-INT-2",
+      "passage": "P_B2",
+      "cat": "INT",
+      "level": "B2",
+      "question": "How does the ferry advocacy group argue their proposal supports long-term island values?",
+      "options": {
+        "A": "It eliminates the need for any future infrastructure projects, ensuring long-term stability.",
+        "B": "It guarantees a permanent reduction in tourism, protecting the island’s quiet lifestyle from outsiders.",
+        "C": "It preserves the island's character and prevents overdevelopment.",
+        "D": "It prevents the island from becoming a target for environmental regulation due to its isolation."
+      },
+      "correct": "C",
+      "score": 10,
+      "explanation": "The ferry advocacy group argues their proposal supports long-term island values because they believe a bridge would irrevocably alter the island's character and threaten its pristine ecosystem, as stated by local historian Eleanor Finch, who emphasizes the island's thriving marine biodiversity and the charm of arriving by sea as irreplaceable assets. Additionally, they warn that increased accessibility from a bridge might lead to overdevelopment, which would endanger the tranquil lifestyle cherished by many islanders, thus preserving the island's unique identity and way of life."
+    },
+    {
+      "id": "P_B2-CRIT-1",
+      "passage": "P_B2",
+      "cat": "CRIT",
+      "level": "B2",
+      "question": "How effectively does the author use contrast to highlight the central conflict?",
+      "options": {
+        "A": "It clearly emphasizes the tension between progress and preservation.",
+        "B": "It minimizes the significance of the island's environmental concerns by portraying them as outdated fears.",
+        "C": "It portrays the ferry option as inherently superior due to its lower cost and environmental benefits.",
+        "D": "It presents the bridge as the only viable solution for ensuring reliable transportation during storms."
+      },
+      "correct": "A",
+      "score": 10,
+      "explanation": "The author uses contrast effectively by juxtaposing the bridge advocates' focus on economic growth, reduced travel time, and reliability against the ferry supporters' emphasis on environmental protection, cultural preservation, and cost efficiency. This is evidenced by the passage stating, 'While one side envisions a future of prosperity and connectivity, the other sees a premonition of change that could dilute the very essence of island life,' which directly illustrates the central conflict between progress and preservation."
+    },
+    {
+      "id": "P_C1-FR-1",
+      "passage": "P_C1",
+      "cat": "FR",
+      "level": "C1",
+      "question": "What is the main reason quiet hours fail to improve focus in open-plan offices?",
+      "options": {
+        "A": "Quiet hours fail because employees are too accustomed to background noise and cannot adapt to sudden silence.",
+        "B": "Quiet hours fail because employees use headphones to listen to music, which distracts them more than conversation.",
+        "C": "Quiet hours fail because they are too short to allow for meaningful deep work sessions.",
+        "D": "Unpredictable and meaningful speech disrupts concentration more than noise levels alone."
+      },
+      "correct": "D",
+      "score": 10,
+      "explanation": "The text states that 'it is the unpredictability and semantic content of speech that disrupt working memory,' which directly supports the idea that meaningful, unexpected conversations are more disruptive than mere noise levels. This is further reinforced by the claim that 'a snippet of a sales pitch or a casual joke can shatter immersion far more effectively than ambient hum,' proving that the content and unpredictability of speech are the core issues, not just decibel levels."
+    },
+    {
+      "id": "P_C1-INF-1",
+      "passage": "P_C1",
+      "cat": "INF",
+      "level": "C1",
+      "question": "What does the author imply about the effectiveness of quiet hours in improving employee well-being?",
+      "options": {
+        "A": "They allow managers to avoid making costly changes to office design while still addressing employee needs.",
+        "B": "They are scientifically proven to enhance memory and reading comprehension for all types of workers.",
+        "C": "They are widely embraced by employees as a sustainable solution to workplace distractions.",
+        "D": "They provide only temporary relief and fail to reduce overall stress."
+      },
+      "correct": "D",
+      "score": 10,
+      "explanation": "The author implies that quiet hours are ineffective in improving employee well-being because, while they offer short-term relief, they do not reduce overall stress levels—evidence from the text states, 'While employees report short-term relief during quiet hours, overall stress levels have not decreased.' Furthermore, the text notes that workers in open environments experience '19% more unplanned interactions per day,' which contributes to cognitive overload and undermines any benefits from quiet hours, reinforcing that these measures fail to address the root problem."
+    },
+    {
+      "id": "P_C1-INT-1",
+      "passage": "P_C1",
+      "cat": "INT",
+      "level": "C1",
+      "question": "Why do quiet hours fail to reduce employee stress despite short-term relief, according to the text?",
+      "options": {
+        "A": "They are too short to have a meaningful impact on daily stress levels.",
+        "B": "They increase unplanned interactions, causing cognitive overload.",
+        "C": "They reduce collaboration, which negatively impacts team morale over time.",
+        "D": "They rely on employees’ self-discipline, which is inconsistent and unreliable."
+      },
+      "correct": "B",
+      "score": 10,
+      "explanation": "The text states that a longitudinal study by Steelcase revealed workers in open environments experienced 19% more unplanned interactions per day compared to those in private offices, leading to cognitive overload and reduced task persistence. This increase in unplanned interactions, even during quiet hours, undermines any short-term relief and contributes to sustained stress, showing that quiet hours fail to address the root cause of stress in open-plan offices."
+    },
+    {
+      "id": "M-01",
+      "passage": null,
+      "cat": "MATH",
+      "level": null,
+      "question": "A jacket was originally priced at €60, but the shop now sells it for €36. By what percentage has the price decreased?",
+      "options": {
+        "A": "24 %",
+        "B": "40 %",
+        "C": "67 %",
+        "D": "60 %"
+      },
+      "correct": "B",
+      "explanation": "Decrease = 60 - 36 = 24; 24 / 60 = 0.40 = 40 %.",
+      "score": null,
+      "template": {
+        "P": 60,
+        "Q": 36,
+        "r": 0.4,
+        "misconceptions": {
+          "A": "absolute difference",
+          "B": "key",
+          "C": "wrong base",
+          "D": "remaining fraction"
+        }
+      },
+      "template_stem": "A shop reduces the price of a jacket from €60 to €36. By what percentage has the price decreased?"
+    },
+    {
+      "id": "M-02",
+      "passage": null,
+      "cat": "MATH",
+      "level": null,
+      "question": "A bicycle was originally priced at €50 in a shop. After a price reduction, it now costs €40. By what percentage did the price decrease?",
+      "options": {
+        "A": "10 %",
+        "B": "80 %",
+        "C": "25 %",
+        "D": "20 %"
+      },
+      "correct": "D",
+      "explanation": "Decrease = 50 - 40 = 10; 10 / 50 = 0.20 = 20 %.",
+      "score": null,
+      "template": {
+        "P": 50,
+        "Q": 40,
+        "r": 0.2,
+        "misconceptions": {
+          "A": "absolute difference",
+          "B": "remaining fraction",
+          "C": "wrong base",
+          "D": "key"
+        }
+      },
+      "template_stem": "A shop reduces the price of a bicycle from €50 to €40. By what percentage has the price decreased?"
+    },
+    {
+      "id": "M-03",
+      "passage": null,
+      "cat": "MATH",
+      "level": null,
+      "question": "A shop reduces the price of a pair of headphones from €120 to €96. By what percentage has the price decreased?",
+      "options": {
+        "A": "25 %",
+        "B": "24 %",
+        "C": "80 %",
+        "D": "20 %"
+      },
+      "correct": "D",
+      "explanation": "Decrease = 120 - 96 = 24; 24 / 120 = 0.20 = 20 %.",
+      "score": null,
+      "template": {
+        "P": 120,
+        "Q": 96,
+        "r": 0.2,
+        "misconceptions": {
+          "A": "wrong base",
+          "B": "absolute difference",
+          "C": "remaining fraction",
+          "D": "key"
+        }
+      },
+      "template_stem": "A shop reduces the price of a pair of headphones from €120 to €96. By what percentage has the price decreased?"
+    },
+    {
+      "id": "M-04",
+      "passage": null,
+      "cat": "MATH",
+      "level": null,
+      "question": "A train ticket was originally priced at CHF120, but it's now on sale for CHF72. What is the percentage decrease in the price of the ticket?",
+      "options": {
+        "A": "67 %",
+        "B": "40 %",
+        "C": "48 %",
+        "D": "60 %"
+      },
+      "correct": "B",
+      "explanation": "Decrease = 120 - 72 = 48; 48 / 120 = 0.40 = 40 %.",
+      "score": null,
+      "template": {
+        "P": 120,
+        "Q": 72,
+        "r": 0.4,
+        "misconceptions": {
+          "A": "wrong base",
+          "B": "key",
+          "C": "absolute difference",
+          "D": "remaining fraction"
+        }
+      },
+      "template_stem": "A shop reduces the price of a train ticket from CHF120 to CHF72. By what percentage has the price decreased?"
+    },
+    {
+      "id": "M-05",
+      "passage": null,
+      "cat": "MATH",
+      "level": null,
+      "question": "A shop reduces the price of a textbook from €60 to €48. By what percentage has the price decreased?",
+      "options": {
+        "A": "25 %",
+        "B": "20 %",
+        "C": "12 %",
+        "D": "80 %"
+      },
+      "correct": "B",
+      "explanation": "Decrease = 60 - 48 = 12; 12 / 60 = 0.20 = 20 %.",
+      "score": null,
+      "template": {
+        "P": 60,
+        "Q": 48,
+        "r": 0.2,
+        "misconceptions": {
+          "A": "wrong base",
+          "B": "key",
+          "C": "absolute difference",
+          "D": "remaining fraction"
+        }
+      },
+      "template_stem": "A shop reduces the price of a textbook from €60 to €48. By what percentage has the price decreased?"
+    },
+    {
+      "id": "M-06",
+      "passage": null,
+      "cat": "MATH",
+      "level": null,
+      "question": "A concert ticket originally costs £40, but the shop now sells it for £36. By what percentage has the price decreased?",
+      "options": {
+        "A": "10 %",
+        "B": "4 %",
+        "C": "90 %",
+        "D": "11 %"
+      },
+      "correct": "A",
+      "explanation": "Decrease = 40 - 36 = 4; 4 / 40 = 0.10 = 10 %.",
+      "score": null,
+      "template": {
+        "P": 40,
+        "Q": 36,
+        "r": 0.1,
+        "misconceptions": {
+          "A": "key",
+          "B": "absolute difference",
+          "C": "remaining fraction",
+          "D": "wrong base"
+        }
+      },
+      "template_stem": "A shop reduces the price of a concert ticket from £40 to £36. By what percentage has the price decreased?"
+    },
+    {
+      "id": "M-07",
+      "passage": null,
+      "cat": "MATH",
+      "level": null,
+      "question": "A lamp originally costs €120, but is now on sale for €108. By what percentage has the price of the lamp decreased?",
+      "options": {
+        "A": "12 %",
+        "B": "10 %",
+        "C": "90 %",
+        "D": "11 %"
+      },
+      "correct": "B",
+      "explanation": "Decrease = 120 - 108 = 12; 12 / 120 = 0.10 = 10 %.",
+      "score": null,
+      "template": {
+        "P": 120,
+        "Q": 108,
+        "r": 0.1,
+        "misconceptions": {
+          "A": "absolute difference",
+          "B": "key",
+          "C": "remaining fraction",
+          "D": "wrong base"
+        }
+      },
+      "template_stem": "A shop reduces the price of a lamp from €120 to €108. By what percentage has the price decreased?"
+    },
+    {
+      "id": "M-08",
+      "passage": null,
+      "cat": "MATH",
+      "level": null,
+      "question": "A shop reduces the price of a backpack from CHF40 to CHF32. By what percentage has the price decreased?",
+      "options": {
+        "A": "20 %",
+        "B": "8 %",
+        "C": "80 %",
+        "D": "25 %"
+      },
+      "correct": "A",
+      "explanation": "Decrease = 40 - 32 = 8; 8 / 40 = 0.20 = 20 %.",
+      "score": null,
+      "template": {
+        "P": 40,
+        "Q": 32,
+        "r": 0.2,
+        "misconceptions": {
+          "A": "key",
+          "B": "absolute difference",
+          "C": "remaining fraction",
+          "D": "wrong base"
+        }
+      },
+      "template_stem": "A shop reduces the price of a backpack from CHF40 to CHF32. By what percentage has the price decreased?"
+    },
+    {
+      "id": "M-09",
+      "passage": null,
+      "cat": "MATH",
+      "level": null,
+      "question": "A jacket was originally priced at €80, but the shop now sells it for €48. By what percentage has the price decreased?",
+      "options": {
+        "A": "32 %",
+        "B": "60 %",
+        "C": "67 %",
+        "D": "40 %"
+      },
+      "correct": "D",
+      "explanation": "Decrease = 80 - 48 = 32; 32 / 80 = 0.40 = 40 %.",
+      "score": null,
+      "template": {
+        "P": 80,
+        "Q": 48,
+        "r": 0.4,
+        "misconceptions": {
+          "A": "absolute difference",
+          "B": "remaining fraction",
+          "C": "wrong base",
+          "D": "key"
+        }
+      },
+      "template_stem": "A shop reduces the price of a jacket from €80 to €48. By what percentage has the price decreased?"
+    },
+    {
+      "id": "M-11",
+      "passage": null,
+      "cat": "MATH",
+      "level": null,
+      "question": "A pair of headphones originally cost €60 in a shop. The price has been reduced to €45. What is the percentage decrease in the price?",
+      "options": {
+        "A": "25 %",
+        "B": "75 %",
+        "C": "15 %",
+        "D": "33 %"
+      },
+      "correct": "A",
+      "explanation": "Decrease = 60 - 45 = 15; 15 / 60 = 0.25 = 25 %.",
+      "score": null,
+      "template": {
+        "P": 60,
+        "Q": 45,
+        "r": 0.25,
+        "misconceptions": {
+          "A": "key",
+          "B": "remaining fraction",
+          "C": "absolute difference",
+          "D": "wrong base"
+        }
+      },
+      "template_stem": "A shop reduces the price of a pair of headphones from €60 to €45. By what percentage has the price decreased?"
+    }
+  ]
+}
