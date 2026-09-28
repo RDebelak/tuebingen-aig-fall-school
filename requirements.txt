@@ -1,0 +1,12 @@
+jupyterlab>=4
+openai>=1.50
+pydantic>=2
+jinja2
+pandas
+matplotlib
+scikit-learn
+scipy
+textstat
+nltk
+textblob
+sentence-transformers
