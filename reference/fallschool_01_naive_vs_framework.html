@@ -7873,7 +7873,7 @@ the same question about many items.</li>
 
 <span class="c1"># --- cache: every call is stored; identical calls are replayed ------------------------------</span>
 <span class="n">CACHE_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"cache"</span><span class="p">);</span> <span class="n">CACHE_DIR</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">OFFLINE</span>   <span class="o">=</span> <span class="kc">True</span>                                     <span class="c1"># True: never call the endpoint, only replay</span>
+<span class="n">OFFLINE</span>   <span class="o">=</span> <span class="kc">False</span>                                     <span class="c1"># True: never call the endpoint, only replay</span>
 
 <span class="n">client</span> <span class="o">=</span> <span class="n">OpenAI</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">BASE_URL</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="n">API_KEY</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span> <span class="n">max_retries</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
@@ -7963,14 +7963,6 @@ the same question about many items.</li>
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre><span class="ansi-yellow-fg">WARNING: You are using pip version 21.2.4; however, version 26.0.1 is available.
-You should consider upgrading via the '/Users/debelak/fallschool/fallschool/.venv/bin/python3 -m pip install --upgrade pip' command.</span>
-</pre>
-</div>
-</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
@@ -8147,44 +8139,48 @@ text, so we just print it.</p>
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>**Question 1:**  
-What is the main reason Marit Lund supports the construction of the bridge?  
-A) To reduce the number of ferry cancellations due to high winds  
-B) To improve access for tourists visiting the island  
-C) To allow teenagers to stay with their families and encourage young couples to return  
-D) To eliminate the need for a doctor on the island  
+What is the primary reason given by Marit Lund for supporting the construction of the bridge?  
+
+A) It would reduce the number of ferry cancellations due to high winds.  
+B) It would allow teenagers to attend school on the island without commuting to the mainland.  
+C) It would enable families to stay together and potentially attract young couples back to the island.  
+D) It would eliminate the need for a doctor to live on the island.  
 
 **Correct answer: C**
 
 ---
 
 **Question 2:**  
-Why does Dr. Anders Rask oppose the bridge plan?  
-A) He believes the bridge would be too expensive to maintain  
-B) He is concerned about increased traffic and the potential loss of his medical practice  
-C) He fears the bridge would attract too many tourists and disrupt island life  
-D) He thinks the ferry is faster and more reliable than the bridge  
+Why is Anders Rask likely opposed to the bridge, according to the passage?  
+
+A) He fears the bridge will bring too many tourists and overwhelm the island’s infrastructure.  
+B) He is concerned that the bridge will make his medical practice redundant and reduce his job security.  
+C) He believes the ferry is safer than a bridge in stormy weather.  
+D) He thinks the toll fee will be too high for elderly residents to afford.  
 
 **Correct answer: B**
 
 ---
 
 **Question 3:**  
-What does the passage suggest about the residents’ views on the bridge versus the ferry?  
-A) They are evenly divided between the two options  
-B) They are more concerned with identity and future community values than with transportation  
-C) They strongly prefer the ferry because it is cheaper and more environmentally friendly  
-D) They are indifferent, as both options would bring significant benefits  
+What does the passage suggest about the public opinion on the island regarding the bridge versus the ferry?  
+
+A) The majority of residents support the bridge, as shown by attendance at Marit Lund’s meetings.  
+B) The ferry is more popular than the bridge, as evidenced by longer notes on the harbour office noticeboard.  
+C) Residents are evenly split, with no clear preference emerging.  
+D) The islanders are indifferent and have not expressed any strong opinions.  
 
 **Correct answer: B**
 
 ---
 
 **Question 4:**  
-What does the mention of the "longer notes" on the harbour office noticeboard imply?  
-A) Residents are more interested in the technical details of the bridge  
-B) The ferry option is gaining more public support than the bridge  
-C) The islanders are deeply conflicted about the future of their community  
-D) The regional government is favoring the ferry over the bridge  
+What deeper issue does the passage imply the islanders are debating through the bridge or ferry decision?  
+
+A) The economic cost of infrastructure projects versus the benefits of tourism.  
+B) Whether to modernize the island’s transportation system or preserve its traditional way of life.  
+C) Whether to maintain a rural village identity or become a more connected, urbanized community.  
+D) Whether to prioritize environmental protection or economic development.  
 
 **Correct answer: C**
 </pre>
@@ -8297,16 +8293,34 @@ Text:
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>[FR  ] Q: What is the maximum number of days per year that the ferry service might be disrupted due to strong winds?
-       A: At most 41 days
+<pre>[FR  ] Q: What is the maximum number of days the ferry service was suspended last year due to strong winds?
+       A: forty-one days
 
-[INF ] Q: What does the length of the notes on the harbour office noticeboard suggest about the islanders' feelings toward the bridge?
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[INF ] Q: What does the length of the notes on the harbour office noticeboard suggest about the islanders' feelings toward the bridge?
        A: They are more hesitant about building the bridge.
 
-[INT ] Q: Why might the bridge make the doctor's job unnecessary, according to the text?
-       A: The bridge would make his surgery unnecessary to maintain locally.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[INT ] Q: Why might the bridge make the doctor's job unnecessary, according to the text?
+       A: It would make local medical services redundant.
 
-[CRIT] Q: How effective is the text's ending in revealing the deeper issue behind the transport choice?
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[CRIT] Q: How effective is the text's ending in revealing the deeper issue behind the transport debate?
        A: It powerfully highlights the identity crisis of the islanders.
 
 </pre>
@@ -8390,45 +8404,63 @@ key carries no information.</p>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>[FR] What is the maximum number of days per year that the ferry service might be disrupted due to strong winds?
-     A) At most 18 days
-     B) At most 25 days
-   * C) At most 41 days
-     D) At most 60 days
+<pre>[FR] What is the maximum number of days the ferry service was suspended last year due to strong winds?
+     A) Fifty-one days
+   * B) forty-one days
+     C) Thirty-one days
+     D) Twelve days
 
-      why wrong: The text explicitly states that the ferry was cancelled on forty-one days last year due to wind exceeding force seven, so claiming a maximum of 18 days contradicts this clear evidence and underestimates the actual number.
-      why wrong: While 60 days sounds plausible, the text only provides data for last year—41 cancellations—and never suggests that wind-related disruptions could exceed that number. This distractor overestimates the figure without any textual support.
-      why wrong: The text says the ferry crossing takes 25 minutes, but this is unrelated to the number of days it might be cancelled. Claiming 25 days as the maximum confusion between time and frequency, making it clearly incorrect for a careful reader.
+      why wrong: The text clearly states the ferry was cancelled on forty-one days last year when wind exceeded force seven, making thirty-one days incorrect and significantly lower than the actual number.
+      why wrong: The text specifies exactly forty-one days of cancellations due to wind, so fifty-one days is a plausible-sounding exaggeration that contradicts the stated figure.
+      why wrong: Twelve days is far too low and contradicts the text’s explicit mention of forty-one days of cancellations, making it a tempting but clearly incorrect choice for careful readers.
 
-[INF] What does the length of the notes on the harbour office noticeboard suggest about the islanders' feelings toward the bridge?
-     A) They are more enthusiastic about the bridge than they let on publicly.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[INF] What does the length of the notes on the harbour office noticeboard suggest about the islanders' feelings toward the bridge?
+     A) They are more enthusiastic about the bridge than the ferry.
    * B) They are more hesitant about building the bridge.
-     C) They are more interested in preserving the ferry than in improving transportation options.
-     D) They believe the bridge will solve all of the island’s problems, including overcrowding and lack of services.
+     C) They are more interested in preserving the ferry than in improving transportation.
+     D) They believe the bridge will solve all of the island’s economic problems.
 
-      why wrong: This contradicts the text, which states that the ferry has been receiving the longer notes on the noticeboard—indicating deeper reflection or concern about the bridge. The length of the notes suggests hesitation, not hidden enthusiasm.
-      why wrong: The text explicitly warns that the bridge would make local services like the doctor’s surgery unnecessary, and the island currently has no car park or adequate road space. The longer notes suggest concern, not confidence in the bridge solving all issues.
-      why wrong: The text does not claim the islanders prefer the ferry over better transport; rather, it shows they are deeply divided and reflecting on identity. The longer notes on the ferry side suggest caution, not a preference for the current ferry system.
+      why wrong: This contradicts the text, which explicitly states that the ferry has been receiving the longer notes on the noticeboard, suggesting deeper engagement or concern with the ferry option. A more enthusiastic group would likely leave shorter, more supportive messages for the bridge.
+      why wrong: The text never claims the bridge will solve all economic problems; in fact, it highlights concerns about traffic, tolls, and the potential loss of local services. This is an overstatement not supported by any evidence in the passage.
+      why wrong: While the ferry has longer notes, the text does not suggest the islanders value the ferry itself over better transport. Instead, the length of the notes reflects hesitation and deeper reflection on identity, not a preference for the current ferry system.
 
-[INT] Why might the bridge make the doctor's job unnecessary, according to the text?
-     A) The bridge would allow the doctor to commute to a larger hospital on the mainland, reducing the need for his local practice.
-     B) The bridge would bring so many new residents that the doctor would be overwhelmed and unable to keep up with demand.
-   * C) The bridge would make his surgery unnecessary to maintain locally.
-     D) The bridge would make it easier for the doctor to travel to medical conferences, improving his skills and reducing the need for local care.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[INT] Why might the bridge make the doctor's job unnecessary, according to the text?
+     A) It would allow the doctor to commute to the mainland, reducing his need to live on the island.
+     B) It would bring more tourists, increasing the demand for medical care and making his job more essential.
+   * C) It would make local medical services redundant.
+     D) It would reduce ferry cancellations, making it easier for the doctor to travel to the mainland for training.
 
-      why wrong: The text does not suggest the doctor would move or commute; instead, it states the bridge would make his role 'unnecessary to maintain locally,' implying the service could be replaced or eliminated, not relocated.
-      why wrong: This contradicts the text, which implies the bridge would reduce the need for local services like the doctor’s, not increase demand. The concern is about redundancy, not overwork.
-      why wrong: The text never mentions professional development or improved skills as a reason for the doctor’s role becoming unnecessary. The focus is on the bridge reducing the need for local medical services, not enhancing them.
+      why wrong: The text never suggests the doctor would move or commute; in fact, it implies he stays because his role is tied to the island. The idea that he would leave is unsupported and contradicts the implication that his job is essential to island life.
+      why wrong: This reverses the logic of the text. The passage states the bridge could make local services like the doctor’s post 'unnecessary to maintain locally,' not more vital. The increase in visitors is cited by Lund, not Rask, and is not linked to higher medical demand.
+      why wrong: The text does not mention the doctor needing training or traveling for professional development. The focus is on the bridge making local services redundant, not improving access for professionals. This distractor misrepresents the doctor’s role and the purpose of the bridge.
 
-[CRIT] How effective is the text's ending in revealing the deeper issue behind the transport choice?
-     A) It frames the debate as purely economic, focusing on costs and traffic rather than cultural or emotional concerns.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[CRIT] How effective is the text's ending in revealing the deeper issue behind the transport debate?
+     A) It minimizes the practical concerns of infrastructure and daily life by focusing only on abstract identity questions.
    * B) It powerfully highlights the identity crisis of the islanders.
-     C) It suggests that the islanders are too divided to make a coherent choice, undermining any sense of collective identity.
-     D) It trivializes the decision by reducing it to a matter of personal preference rather than community values.
+     C) It reduces the debate to a simple choice between modernity and tradition, oversimplifying the islanders’ complex situation.
+     D) It suggests that the islanders are too divided to make a rational decision about transportation.
 
-      why wrong: The text does not treat the decision as trivial or based on mere preference; instead, it carefully builds the argument that the choice reflects deep-rooted questions about the island’s identity and future, making this a clear contradiction of the text’s tone and purpose.
-      why wrong: The text does not portray the islanders as divided or incapable of coherence; on the contrary, it implies a shared reflection on identity, with the longer notes on the noticeboard indicating thoughtful engagement, not fragmentation.
-      why wrong: The text explicitly moves beyond economics—highlighting emotional ties, family life, and identity—making this a direct contradiction; the ending specifically rejects economic reductionism in favor of a deeper cultural question.
+      why wrong: The text does not minimize practical concerns; it explicitly discusses tolls, traffic, road capacity, and service availability. The ending builds on these concrete issues to reveal their deeper significance, rather than dismissing them.
+      why wrong: The text does not claim the islanders are irrational or incapable of rational decision-making. Instead, it portrays their deliberation as thoughtful and reflective, emphasizing that the debate is about values and identity, not lack of reason.
+      why wrong: The text avoids reducing the issue to a binary of modernity vs. tradition. It presents both options as involving trade-offs and deeper questions about community identity, showing nuance rather than oversimplification.
 
 </pre>
 </div>
@@ -8517,9 +8549,9 @@ parsed by hand before Notebook 3 could screen it.</li>
 <th>0</th>
 <td>framework</td>
 <td>FR</td>
-<td>What is the maximum number of days per year th...</td>
-<td>At most 41 days</td>
-<td>True</td>
+<td>What is the maximum number of days the ferry s...</td>
+<td>forty-one days</td>
+<td>False</td>
 </tr>
 <tr>
 <th>1</th>
@@ -8534,7 +8566,7 @@ parsed by hand before Notebook 3 could screen it.</li>
 <td>framework</td>
 <td>INT</td>
 <td>Why might the bridge make the doctor's job unn...</td>
-<td>The bridge would make his surgery unnecessary ...</td>
+<td>It would make local medical services redundant.</td>
 <td>False</td>
 </tr>
 <tr>
@@ -8557,44 +8589,48 @@ parsed by hand before Notebook 3 could screen it.</li>
 Naive reply, for comparison:
 
 **Question 1:**  
-What is the main reason Marit Lund supports the construction of the bridge?  
-A) To reduce the number of ferry cancellations due to high winds  
-B) To improve access for tourists visiting the island  
-C) To allow teenagers to stay with their families and encourage young couples to return  
-D) To eliminate the need for a doctor on the island  
+What is the primary reason given by Marit Lund for supporting the construction of the bridge?  
+
+A) It would reduce the number of ferry cancellations due to high winds.  
+B) It would allow teenagers to attend school on the island without commuting to the mainland.  
+C) It would enable families to stay together and potentially attract young couples back to the island.  
+D) It would eliminate the need for a doctor to live on the island.  
 
 **Correct answer: C**
 
 ---
 
 **Question 2:**  
-Why does Dr. Anders Rask oppose the bridge plan?  
-A) He believes the bridge would be too expensive to maintain  
-B) He is concerned about increased traffic and the potential loss of his medical practice  
-C) He fears the bridge would attract too many tourists and disrupt island life  
-D) He thinks the ferry is faster and more reliable than the bridge  
+Why is Anders Rask likely opposed to the bridge, according to the passage?  
+
+A) He fears the bridge will bring too many tourists and overwhelm the island’s infrastructure.  
+B) He is concerned that the bridge will make his medical practice redundant and reduce his job security.  
+C) He believes the ferry is safer than a bridge in stormy weather.  
+D) He thinks the toll fee will be too high for elderly residents to afford.  
 
 **Correct answer: B**
 
 ---
 
 **Question 3:**  
-What does the passage suggest about the residents’ views on the bridge versus the ferry?  
-A) They are evenly divided between the two options  
-B) They are more concerned with identity and future community values than with transportation  
-C) They strongly prefer the ferry because it is cheaper and more environmentally friendly  
-D) They are indifferent, as both options would bring significant benefits  
+What does the passage suggest about the public opinion on the island regarding the bridge versus the ferry?  
+
+A) The majority of residents support the bridge, as shown by attendance at Marit Lund’s meetings.  
+B) The ferry is more popular than the bridge, as evidenced by longer notes on the harbour office noticeboard.  
+C) Residents are evenly split, with no clear preference emerging.  
+D) The islanders are indifferent and have not expressed any strong opinions.  
 
 **Correct answer: B**
 
 ---
 
 **Question 4:**  
-What does the mention of the "longer notes" on the harbour office noticeboard imply?  
-A) Residents are more interested in the technical details of the bridge  
-B) The ferry option is gaining more public support than the bridge  
-C) The islanders are deeply conflicted about the future of their community  
-D) The regional government is favoring the ferry over the bridge  
+What deeper issue does the passage imply the islanders are debating through the bridge or ferry decision?  
+
+A) The economic cost of infrastructure projects versus the benefits of tourism.  
+B) Whether to modernize the island’s transportation system or preserve its traditional way of life.  
+C) Whether to maintain a rural village identity or become a more connected, urbanized community.  
+D) Whether to prioritize environmental protection or economic development.  
 
 **Correct answer: C**
 

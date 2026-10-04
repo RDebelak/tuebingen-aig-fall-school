@@ -7871,7 +7871,7 @@ the same question about many items.</li>
 
 <span class="c1"># --- cache: every call is stored; identical calls are replayed ------------------------------</span>
 <span class="n">CACHE_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"cache"</span><span class="p">);</span> <span class="n">CACHE_DIR</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">OFFLINE</span>   <span class="o">=</span> <span class="kc">True</span>                                     <span class="c1"># True: never call the endpoint, only replay</span>
+<span class="n">OFFLINE</span>   <span class="o">=</span> <span class="kc">False</span>                                     <span class="c1"># True: never call the endpoint, only replay</span>
 
 <span class="n">client</span> <span class="o">=</span> <span class="n">OpenAI</span><span class="p">(</span><span class="n">base_url</span><span class="o">=</span><span class="n">BASE_URL</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="n">API_KEY</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">240</span><span class="p">,</span> <span class="n">max_retries</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
@@ -7961,14 +7961,6 @@ the same question about many items.</li>
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre><span class="ansi-yellow-fg">WARNING: You are using pip version 21.2.4; however, version 26.0.1 is available.
-You should consider upgrading via the '/Users/debelak/fallschool/fallschool/.venv/bin/python3 -m pip install --upgrade pip' command.</span>
-</pre>
-</div>
-</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
@@ -8315,9 +8307,9 @@ spread over paragraphs and a point of view, because the four categories need exa
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>P_B1: "The Repair Café and the Shopkeeper's Concern", 313 words
-P_B2: 'The Crossroads of the Isle of Meridian', 406 words
-P_C1: 'The Illusion of Quiet in Open-Plan Offices', 463 words
+<pre>P_B1: "The Repair Café and the Shopkeeper's Concern", 252 words
+P_B2: 'The Crossroads of the Isle of Meridian', 383 words
+P_C1: 'The Illusion of Quiet in Open-Plan Offices', 441 words
 </pre>
 </div>
 </div>
@@ -8382,41 +8374,66 @@ B2 measured as C1 is accepted, B2 measured as C2 is rewritten.</p>
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>P_B1: target B1, measured B1 -&gt; keep
-P_B2: target B2, measured C1 -&gt; keep
-P_C1: target C1, measured C1 -&gt; keep
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>P_B2: target B2, measured C2 -&gt; rewrite
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>   after rewrite: measured B2, 298 words
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>P_C1: target C1, measured C2 -&gt; keep
 
 ==========================================================================================
 P_B1 · The Repair Café and the Shopkeeper's Concern
 
-In the small town of Millbrook, a group of volunteers started a 'Repair Café' last spring. Every Saturday afternoon, people bring broken items—like toasters, lamps, or torn clothes—to the community hall. Volunteers with different skills, such as fixing electronics or sewing, help residents repair the items instead of throwing them away. So far, they have fixed more than 300 items, saving hundreds of pounds in waste disposal costs for the town. The Repair Café’s success has brought the local community closer together.
+In the small town of Millbrook, a group of volunteers started a 'Repair Café' last spring. Every Saturday afternoon, people bring broken items—like toasters, lamps, or torn clothes—to the community hall. Volunteers with repair skills fix these items for free. The aim is to reduce waste and help residents save money. Already, over three hundred items have been repaired, and the café has brought together people from different parts of the town.
 
-The idea behind the Repair Café is to reduce waste and encourage people to reuse what they already own. By repairing rather than replacing, residents save money and reduce their environmental impact. The café also offers a friendly space where people share stories and skills. For many in Millbrook, it has become a weekly highlight and a practical way to manage household items without buying new.
+Mrs. Ellis runs the local hardware shop, 'Ellis &amp; Co.', just two blocks away from the community hall. She has noticed fewer customers buying new light bulbs or small tools since the Repair Café began. Mrs. Ellis worries that if people keep fixing their things instead of buying replacements, her shop will lose business. She has spoken to the town council, suggesting that the café might hurt small businesses.
 
-However, not everyone is happy about the Repair Café. Ms. Eleanor Whitmore, who owns the “Everything Store” on the main street, has voiced her opposition. She claims that fewer people are buying new household goods from her shop because they are fixing old ones instead. She points to a drop in sales of small appliances over the past six months and blames the café for her reduced profits. Ms. Whitmore has even written a letter to the town council, asking them to reconsider the café’s permit.
+The town council listened to both sides. They believe the Repair Café supports the town’s environmental goals and helps people on low incomes. However, they also understand Mrs. Ellis’s concern. The council suggested a compromise: the café could share information about Ellis &amp; Co. and promote responsible shopping. In return, the shop could offer discounts on spare parts for repaired items.
 
-Town councilor James Carter acknowledges the shopkeeper’s concerns but emphasizes that the café was created to benefit the community and the environment. He notes that the council has received many positive comments from residents about the Repair Café. While it is true that some shopkeepers might see a short-term drop in sales, Carter believes the café promotes long-term sustainability and community spirit. The council is reviewing the situation carefully but has no immediate plans to close the Repair Café.
+Community members are divided. Some think the café is a fantastic way to reduce waste and build friendships. Others feel that small shops like Ellis &amp; Co. need support to stay open. Whatever happens, the Repair Café has already changed how many residents think about repairing rather than discarding things.
 
 ==========================================================================================
 P_B2 · The Crossroads of the Isle of Meridian
 
-The Isle of Meridian, a speck of land nestled in the azure embrace of the Northern Sea, has long been a bastion of self-sufficiency. With a population of just over 2,500 residents, the island's economy thrives on a delicate balance of fishing, horticulture, and tourism. For decades, the only connection to the mainland has been the weekly ferry service operated by Meridian Lines. However, as the island grapples with its future, the debate over whether to construct a bridge to the mainland or to invest in a new, state-of-the-art ferry service has ignited passionate discourse across its quaint, cobblestoned villages.
+The Isle of Meridian, a small island in the North Sea, has always been self-sufficient. With a population of just over 2,500, the island's economy has traditionally depended on fishing and tourism, with visitors attracted by its clean beaches and charming cottages. For the first time in decades, the community must decide whether to build a bridge to the mainland or invest in a new ferry system. This decision affects more than just convenience; it touches on identity, the environment, and the economy.
 
-Proponents of the bridge argue that a fixed link would usher in unprecedented economic growth. They point to studies suggesting that businesses on the island could expand their operations significantly, attracting mainland investors eager for the island's unique charm and natural beauty. Moreover, they highlight the potential for a reduction in travel time from over two hours by ferry to just fifteen minutes by bridge, a change they believe would dramatically boost tourism numbers. The construction of the bridge, they argue, would also provide a reliable lifeline in adverse weather conditions, which have often disrupted ferry schedules and isolated islanders.
+Those in favor of the bridge say it would bring significant economic growth. They predict more trade, tourism, and jobs, pointing to similar changes on the Isle of Wight. A bridge would cut travel time from two hours by ferry to just fifteen minutes by car, making the island much easier for mainland businesses and investors to access. They also believe property prices could rise, drawing wealthy new residents and developers.
 
-Conversely, those advocating for the new ferry emphasize the environmental and cultural preservation that comes with maintaining the island's isolation. Local historian, Eleanor Finch, passionately contends that a bridge would irrevocably alter the island's character and strain its pristine ecosystem. She cites the island's thriving marine biodiversity and the charm of arriving by sea as irreplaceable assets. Furthermore, Ferry Advocates, a community group, estimate that upgrading the ferry service would cost roughly half the price of building a bridge, freeing up funds for other essential services like healthcare and education. They also warn that increased accessibility might lead to overdevelopment, threatening the tranquil lifestyle cherished by many islanders.
+However, critics are concerned about the environmental and cultural impacts. Construction and more traffic could harm the island's fragile ecosystem, which is home to rare seabirds and protected marine life. They also fear that a bridge could make the island feel less unique, turning it into just another suburb of the mainland and weakening its community spirit among residents and visitors.
 
-As the islanders prepare to vote on the matter next month, the quiet hum of debate continues to resonate through the island's cottages and community halls. While one side envisions a future of prosperity and connectivity, the other sees a premonition of change that could dilute the very essence of island life. It is a debate not just about infrastructure, but about identity and the delicate balance between progress and preservation. Whatever decision is made, it will undoubtedly shape the future of the Isle of Meridian, leaving an indelible mark on its residents and their way of life.
+Some islanders wonder if the best solution is not to choose between a bridge and a ferry, but to find a middle ground. They suggest upgrading the ferry could improve connections while protecting the environment. But whether this is possible is unclear, as it depends on local leaders negotiating with mainland authorities and securing enough funding. Whatever the decision, it will shape the Isle of Meridian for many years to come, determining whether the island embraces the future or holds onto its past.
 
 ==========================================================================================
 P_C1 · The Illusion of Quiet in Open-Plan Offices
 
-Open-plan office designs, once heralded as engines of collaboration and transparency, now dominate corporate landscapes worldwide. According to a 2019 study by Oxford Economics, over 70% of U.S. office employees now work in some form of open environment, a figure mirrored in major European cities like London and Berlin. Yet, despite this ubiquity, employee satisfaction and productivity metrics have not correspondingly soared—instead, they remain stubbornly flat or, in many cases, diminished. The response from management has been predictably reflexive: introduce 'quiet hours,' designated times during which conversation is curtailed and headphones become mandatory. These interventions treat the symptom of auditory distraction rather than interrogating the root cause: the architectural and cultural failure to design human-centred workspaces.
+Open-plan office designs, once heralded as engines of collaboration and transparency, now dominate corporate landscapes across North America and Western Europe, with an estimated 70% of all office employees now working in such environments. The proliferation of these floor plans has been accompanied by a countermeasure: 'quiet hours.' Typically imposed between 10 a.m. and 3 p.m., these periods mandate reduced conversation and enforced silence, ostensibly to allow deep work to flourish amidst the ambient din of keyboards and low-level chatter. While the intention is commendable, the imposition of quiet hours represents a symptomatic treatment rather than an addressal of the underlying dysfunction. The fundamental issue is not cacophony itself, but the deliberate architectural denial of privacy and cognitive control that open-plan layouts enforce.
 
-The premise of quiet hours is seductive in its simplicity. By restricting background noise, proponents argue, cognitive tasks requiring deep focus—such as coding, writing, or financial modeling—can proceed unimpeded. Indeed, research by Dr. Orfield’s team at the University of California, Irvine, demonstrated that even moderate background noise (around 60 decibels) can impair reading comprehension and memory performance. However, the problem is not merely decibel level; it is the unpredictability and semantic content of speech that disrupt working memory. Open-plan offices are not just acoustically leaky—they are semantically invasive. A snippet of a sales pitch or a casual joke can shatter immersion far more effectively than ambient hum. Therefore, enforcing silence for three hours a day does not resolve the underlying issue: the absence of spatial control over one’s cognitive environment.
 
-Moreover, the data from post-implementation reviews in companies like Buffer and HubSpot reveal a troubling paradox. While employees report short-term relief during quiet hours, overall stress levels have not decreased. In fact, a longitudinal study by Steelcase revealed that workers in open environments experienced 19% more unplanned interactions per day compared to those in private offices, leading to cognitive overload and reduced task persistence. The quiet hour, in this context, becomes a symbolic concession—an admission of failure disguised as a solution. It acknowledges that the environment is hostile to focus, yet refuses to redesign it. By mandating silence rather than creating acoustic or spatial boundaries, organizations externalize the cost of poor design onto employees’ time management and emotional resilience.
 
-What remains unspoken but implicit throughout these dynamics is a critique of managerial hubris: the belief that culture can override design, that willpower can compensate for environmental inadequacy. The quiet hour is not merely an ineffective remedy; it is a managerial sleight of hand. It allows leadership to claim they have addressed employee well-being without confronting the inconvenient truth—that the very architecture of modern work is at odds with the cognitive demands of knowledge economies. To truly improve outcomes, firms must reconsider the physical and psychological boundaries of work, not just regulate the volume of conversation within them.
+The cognitive cost of open-plan environments is well-documented in research from the University of California, Irvine, where a landmark study revealed that workers in such settings experience a 66% higher rate of distraction compared to those in private offices. This cognitive overload is exacerbated by constant low-level stressors—peering over a partition, overhearing personal calls, or the cumulative noise of hundreds of conversations—creating a physiological state of persistent alertness that impairs memory and problem-solving efficiency. Quiet hours, by contrast, merely pause this assault for a few hours each day, failing to mitigate the ambient insecurity and loss of focus that persists throughout the workday. Like prescribing painkillers for a broken limb, they alleviate a symptom while leaving the structural injury untouched.
+
+
+
+Furthermore, the uneven application of quiet hours often entrenches inequity within the workplace. Not all roles require deep, uninterrupted focus; customer service representatives, for instance, thrive on interaction, making enforced silence counterproductive to their performance and job satisfaction. Meanwhile, knowledge workers may still face interruptions from walk-up queries or visual distractions, even during designated quiet periods. This one-size-fits-all intervention ignores the diversity of cognitive tasks and professional responsibilities, treating the office as a monolithic entity rather than a dynamic ecosystem of roles. The implicit assumption—that all work can be compressed into a few hours of uninterrupted silence—overlooks the reality that distraction is not merely an environmental noise issue, but a structural failure to respect cognitive boundaries.
+
+
+
+Ultimately, if organizations are serious about enhancing productivity and employee well-being, the solution lies not in periodic silence but in reimagining the workspace itself. This could involve flexible spatial zoning, incorporating sound-absorbing materials, or even reintroducing private workstations—not as a retreat from collaboration, but as a foundation for it. Collaboration should be a choice, not a default setting enforced by design. Until that architectural and cultural shift occurs, quiet hours will remain a palliative, soothing the irritation without ever curing the disease.
 </pre>
 </div>
 </div>
@@ -8538,17 +8555,19 @@ content word of four letters or more — a reader can then match words instead o
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>dropped P_B1-FR-2 (question and answer share a word): How has the Repair Café affected the local community beyond fixing items? -&gt; It has strengthened community bonds through shared skills and conversations.
-dropped P_B1-CRIT-2 (question and answer share a word): How well does the structure support the argument for the café? -&gt; It balances both sides, making the argument fair and clear.
-dropped P_B2-FR-1 (question and answer share a word): What is the estimated cost difference between upgrading the ferry and building a bridge? -&gt; The ferry upgrade would cost about half as much as the bridge.
-dropped P_B2-FR-2 (question and answer share a word): How long would travel time be reduced to if a bridge is built? -&gt; Travel time would drop to just fifteen minutes.
-dropped P_B2-FR-3 (question and answer share a word): What environmental concern do opponents of the bridge raise about the island's marine life? -&gt; They fear the bridge would harm the island's thriving marine biodiversity.
-dropped P_B2-INF-3 (question and answer share a word): What does the length of the ferry journey suggest about current travel conditions? -&gt; Travel to the mainland is time-consuming and unreliable.
-dropped P_B2-INT-1 (question and answer share a word): Why do bridge supporters believe the new infrastructure will boost tourism? -&gt; It will reduce travel time from over two hours to just fifteen minutes.
-dropped P_B2-INT-3 (question and answer share a word): What advantage does the bridge offer during adverse weather compared to the current ferry? -&gt; It provides a reliable lifeline when ferry schedules are disrupted.
-dropped P_C1-CRIT-1 (question and answer share a word): How effective is the argument structure in reinforcing the central critique of open-plan offices? -&gt; It is highly effective, using layered evidence to build a compelling case.
-dropped P_C1-CRIT-2 (question and answer share a word): Why is the conclusion particularly impactful in critiquing managerial approaches? -&gt; It exposes managerial hubris by framing quiet hours as symbolic failure.
-26 candidates left
+<pre>dropped P_B1-FR-1 (question and answer share a word): What is the maximum number of items that have been fixed at the Repair Café so far? -&gt; Over three hundred items
+dropped P_B1-INF-3 (question and answer share a word): How might the Repair Café influence people’s shopping habits in the long term? -&gt; People may prefer repairing items rather than buying new ones.
+dropped P_B1-INT-1 (question and answer share a word): Why did the town council suggest the Repair Café promote Ellis &amp; Co.? -&gt; To help the shop stay open while supporting repair efforts.
+dropped P_B1-CRIT-3 (question and answer share a word): How successful is the structure in building interest in the story? -&gt; It gradually builds interest by showing conflict and resolution.
+dropped P_B2-INF-2 (question and answer share a word): What does the mention of the Isle of Wight suggest about the bridge supporters' view? -&gt; They believe a bridge can lead to economic benefits similar to those experienced elsewhere.
+dropped P_C1-FR-3 (question and answer share a word): Why might quiet hours be ineffective for certain job roles, as mentioned in the passage? -&gt; Some roles depend on constant interaction, making silence counterproductive.
+dropped P_C1-INF-1 (question and answer share a word): What does the author imply about the effectiveness of quiet hours in addressing workplace distractions? -&gt; They only temporarily reduce distractions without solving the root cause.
+dropped P_C1-INF-2 (question and answer share a word): Why might quiet hours be counterproductive for certain employees, according to the text? -&gt; They disrupt employees whose roles require constant interaction.
+dropped P_C1-INT-1 (question and answer share a word): Why might quiet hours fail to improve focus for knowledge workers despite their intention? -&gt; They still face interruptions from walk-up queries and visual distractions during quiet periods.
+dropped P_C1-INT-2 (too long)
+dropped P_C1-INT-3 (question and answer share a word): What does the text suggest about the fairness of implementing quiet hours across all roles? -&gt; They are counterproductive for roles like customer service that rely on interaction.
+dropped P_C1-CRIT-1 (question and answer share a word): How effective is the metaphor of 'painkillers for a broken limb' in conveying the text's critique of quiet hours? -&gt; It powerfully illustrates that quiet hours treat symptoms, not root causes.
+24 candidates left
 </pre>
 </div>
 </div>
@@ -8639,185 +8658,171 @@ answer. 10 means no flaw.</p>
 <tbody>
 <tr>
 <th>0</th>
-<td>P_B1-FR-1</td>
+<td>P_B1-FR-2</td>
 <td>10</td>
-<td>What is the main goal of the Repair Café in Mi...</td>
-<td>To reduce waste and promote reusing household ...</td>
+<td>How often does the Repair Café operate at the ...</td>
+<td>Every Saturday afternoon</td>
 </tr>
 <tr>
 <th>1</th>
 <td>P_B1-FR-3</td>
-<td>10</td>
-<td>What concern did the owner of the Everything S...</td>
-<td>She noticed a drop in sales of small appliance...</td>
+<td>5</td>
+<td>What did the town council propose to balance s...</td>
+<td>Promote responsible shopping and offer part di...</td>
 </tr>
 <tr>
 <th>2</th>
 <td>P_B1-INF-1</td>
 <td>10</td>
-<td>What is the main reason the Repair Café was st...</td>
-<td>To reduce waste and encourage reuse of items.</td>
+<td>Why might the Repair Café have a positive effe...</td>
+<td>It reduces waste by fixing broken items instea...</td>
 </tr>
 <tr>
 <th>3</th>
 <td>P_B1-INF-2</td>
 <td>10</td>
-<td>How might the Repair Café affect the town’s en...</td>
-<td>It reduces waste and lowers environmental impact.</td>
+<td>What does the town council suggest to help bot...</td>
+<td>The café could promote Ellis &amp; Co. and the sho...</td>
 </tr>
 <tr>
 <th>4</th>
-<td>P_B1-INF-3</td>
+<td>P_B1-INT-2</td>
 <td>10</td>
-<td>Why might some shopkeepers be unhappy with the...</td>
-<td>They are losing sales because people fix old i...</td>
+<td>How might the Repair Café indirectly benefit E...</td>
+<td>By directing customers to buy spare parts at t...</td>
 </tr>
 <tr>
 <th>5</th>
-<td>P_B1-INT-1</td>
-<td>10</td>
-<td>Why might some shopkeepers see a short-term dr...</td>
-<td>Because people are fixing old items instead of...</td>
+<td>P_B1-INT-3</td>
+<td>4</td>
+<td>What concern did Mrs. Ellis express about the ...</td>
+<td>It might reduce her shop’s sales of small tool...</td>
 </tr>
 <tr>
 <th>6</th>
-<td>P_B1-INT-2</td>
+<td>P_B1-CRIT-1</td>
 <td>10</td>
-<td>How does the Repair Café help the environment ...</td>
-<td>By reducing waste and encouraging reuse of items.</td>
+<td>How effective is the ending in showing the caf...</td>
+<td>It effectively shows lasting change in people'...</td>
 </tr>
 <tr>
 <th>7</th>
-<td>P_B1-INT-3</td>
+<td>P_B1-CRIT-2</td>
 <td>10</td>
-<td>What does the town council believe the Repair ...</td>
-<td>Long-term sustainability and community spirit.</td>
+<td>How well does the text present both sides of t...</td>
+<td>It fairly presents concerns and benefits, show...</td>
 </tr>
 <tr>
 <th>8</th>
-<td>P_B1-CRIT-1</td>
+<td>P_B2-FR-1</td>
 <td>10</td>
-<td>How effective is the ending in showing the con...</td>
-<td>It shows no immediate closure, leaving the iss...</td>
+<td>What factor could influence the success of imp...</td>
+<td>Securing sufficient funding and cooperation wi...</td>
 </tr>
 <tr>
 <th>9</th>
-<td>P_B1-CRIT-3</td>
+<td>P_B2-FR-2</td>
 <td>10</td>
-<td>How effective is the example of Ms. Whitmore’s...</td>
-<td>It strengthens the argument by showing real op...</td>
+<td>How might the island’s natural environment be ...</td>
+<td>Construction and increased traffic could damag...</td>
 </tr>
 <tr>
 <th>10</th>
-<td>P_B2-INF-1</td>
+<td>P_B2-FR-3</td>
 <td>10</td>
-<td>What can be inferred about the islanders' prio...</td>
-<td>They value preserving their way of life over r...</td>
+<td>What change in travel time would a bridge brin...</td>
+<td>Reducing the journey from two hours to just fi...</td>
 </tr>
 <tr>
 <th>11</th>
-<td>P_B2-INF-2</td>
+<td>P_B2-INF-1</td>
 <td>10</td>
-<td>Why might the ferry upgrade be seen as more su...</td>
-<td>It is less expensive and helps protect the isl...</td>
+<td>What can be inferred about the islanders' atti...</td>
+<td>They are divided on whether to embrace modern ...</td>
 </tr>
 <tr>
 <th>12</th>
-<td>P_B2-INT-2</td>
+<td>P_B2-INF-3</td>
 <td>10</td>
-<td>How does the ferry advocacy group argue their ...</td>
-<td>It preserves the island's character and preven...</td>
+<td>Why might upgrading the ferry be seen as a com...</td>
+<td>It could improve access without harming the en...</td>
 </tr>
 <tr>
 <th>13</th>
-<td>P_B2-CRIT-1</td>
+<td>P_B2-INT-1</td>
 <td>10</td>
-<td>How effectively does the author use contrast t...</td>
-<td>It clearly emphasizes the tension between prog...</td>
+<td>Why might upgrading the ferry be considered a ...</td>
+<td>It could improve connections while protecting ...</td>
 </tr>
 <tr>
 <th>14</th>
-<td>P_B2-CRIT-2</td>
+<td>P_B2-INT-2</td>
 <td>10</td>
-<td>Why is the ending particularly impactful for t...</td>
-<td>It reinforces the deeper significance of the d...</td>
+<td>What concern do critics have about the bridge ...</td>
+<td>It could make the island feel less unique and ...</td>
 </tr>
 <tr>
 <th>15</th>
-<td>P_B2-CRIT-3</td>
+<td>P_B2-INT-3</td>
 <td>10</td>
-<td>How does the inclusion of a local historian st...</td>
-<td>It adds credible, personal insight that deepen...</td>
+<td>How could the decision to build a bridge or up...</td>
+<td>It could bring economic growth or preserve tra...</td>
 </tr>
 <tr>
 <th>16</th>
-<td>P_C1-FR-1</td>
+<td>P_B2-CRIT-1</td>
 <td>10</td>
-<td>What is the main reason quiet hours fail to im...</td>
-<td>Unpredictable and meaningful speech disrupts c...</td>
+<td>How effective is the text's ending in emphasiz...</td>
+<td>It effectively highlights the long-term impact...</td>
 </tr>
 <tr>
 <th>17</th>
-<td>P_C1-FR-2</td>
+<td>P_B2-CRIT-2</td>
 <td>10</td>
-<td>How do employees in open offices experience in...</td>
-<td>They face 19% more unplanned interactions daily.</td>
+<td>How well does the author balance opposing view...</td>
+<td>The author fairly presents both economic and e...</td>
 </tr>
 <tr>
 <th>18</th>
-<td>P_C1-FR-3</td>
+<td>P_B2-CRIT-3</td>
 <td>10</td>
-<td>What does the author suggest is the deeper iss...</td>
-<td>The lack of spatial and acoustic control in of...</td>
+<td>How does the structure support the argument ab...</td>
+<td>It builds tension by weighing options before l...</td>
 </tr>
 <tr>
 <th>19</th>
-<td>P_C1-INF-1</td>
+<td>P_C1-FR-1</td>
 <td>10</td>
-<td>What does the author imply about the effective...</td>
-<td>They provide only temporary relief and fail to...</td>
+<td>What is the primary reason open-plan offices h...</td>
+<td>They deny workers privacy and control over the...</td>
 </tr>
 <tr>
 <th>20</th>
-<td>P_C1-INF-2</td>
+<td>P_C1-FR-2</td>
 <td>10</td>
-<td>Why does the author argue that open-plan offic...</td>
-<td>Because unpredictable speech disrupts focus mo...</td>
+<td>How does the text describe the impact of quiet...</td>
+<td>They offer temporary relief but fail to resolv...</td>
 </tr>
 <tr>
 <th>21</th>
 <td>P_C1-INF-3</td>
 <td>10</td>
-<td>What does the text suggest about managerial at...</td>
-<td>They prioritize control over environment rathe...</td>
+<td>What does the author suggest is the true probl...</td>
+<td>The lack of privacy and control over one's cog...</td>
 </tr>
 <tr>
 <th>22</th>
-<td>P_C1-INT-1</td>
+<td>P_C1-CRIT-2</td>
 <td>10</td>
-<td>Why do quiet hours fail to reduce employee str...</td>
-<td>They increase unplanned interactions, causing ...</td>
+<td>Why is the argument strengthened by contrastin...</td>
+<td>It exposes the flaw in applying quiet hours un...</td>
 </tr>
 <tr>
 <th>23</th>
-<td>P_C1-INT-2</td>
-<td>10</td>
-<td>What does the text suggest is the real reason ...</td>
-<td>They don’t address semantic intrusion from unp...</td>
-</tr>
-<tr>
-<th>24</th>
-<td>P_C1-INT-3</td>
-<td>10</td>
-<td>How does the text characterize the quiet hour ...</td>
-<td>As a symbolic concession that avoids redesigni...</td>
-</tr>
-<tr>
-<th>25</th>
 <td>P_C1-CRIT-3</td>
 <td>10</td>
-<td>How does the author’s use of research enhance ...</td>
-<td>It strengthens credibility by showing limitati...</td>
+<td>How does the text's conclusion enhance its ove...</td>
+<td>It shifts from critique to solution, making th...</td>
 </tr>
 </tbody>
 </table>
@@ -8899,7 +8904,7 @@ answer. 10 means no flaw.</p>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>nothing to refine
+<pre>2 weak pairs, 0 improved
 </pre>
 </div>
 </div>
@@ -8933,185 +8938,171 @@ answer. 10 means no flaw.</p>
 <tbody>
 <tr>
 <th>0</th>
-<td>P_B1-FR-1</td>
+<td>P_B1-FR-2</td>
 <td>10</td>
-<td>What is the main goal of the Repair Café in Mi...</td>
-<td>To reduce waste and promote reusing household ...</td>
+<td>How often does the Repair Café operate at the ...</td>
+<td>Every Saturday afternoon</td>
 </tr>
 <tr>
 <th>1</th>
 <td>P_B1-FR-3</td>
-<td>10</td>
-<td>What concern did the owner of the Everything S...</td>
-<td>She noticed a drop in sales of small appliance...</td>
+<td>5</td>
+<td>What did the town council propose to balance s...</td>
+<td>Promote responsible shopping and offer part di...</td>
 </tr>
 <tr>
 <th>2</th>
 <td>P_B1-INF-1</td>
 <td>10</td>
-<td>What is the main reason the Repair Café was st...</td>
-<td>To reduce waste and encourage reuse of items.</td>
+<td>Why might the Repair Café have a positive effe...</td>
+<td>It reduces waste by fixing broken items instea...</td>
 </tr>
 <tr>
 <th>3</th>
 <td>P_B1-INF-2</td>
 <td>10</td>
-<td>How might the Repair Café affect the town’s en...</td>
-<td>It reduces waste and lowers environmental impact.</td>
+<td>What does the town council suggest to help bot...</td>
+<td>The café could promote Ellis &amp; Co. and the sho...</td>
 </tr>
 <tr>
 <th>4</th>
-<td>P_B1-INF-3</td>
+<td>P_B1-INT-2</td>
 <td>10</td>
-<td>Why might some shopkeepers be unhappy with the...</td>
-<td>They are losing sales because people fix old i...</td>
+<td>How might the Repair Café indirectly benefit E...</td>
+<td>By directing customers to buy spare parts at t...</td>
 </tr>
 <tr>
 <th>5</th>
-<td>P_B1-INT-1</td>
-<td>10</td>
-<td>Why might some shopkeepers see a short-term dr...</td>
-<td>Because people are fixing old items instead of...</td>
+<td>P_B1-INT-3</td>
+<td>4</td>
+<td>What concern did Mrs. Ellis express about the ...</td>
+<td>It might reduce her shop’s sales of small tool...</td>
 </tr>
 <tr>
 <th>6</th>
-<td>P_B1-INT-2</td>
+<td>P_B1-CRIT-1</td>
 <td>10</td>
-<td>How does the Repair Café help the environment ...</td>
-<td>By reducing waste and encouraging reuse of items.</td>
+<td>How effective is the ending in showing the caf...</td>
+<td>It effectively shows lasting change in people'...</td>
 </tr>
 <tr>
 <th>7</th>
-<td>P_B1-INT-3</td>
+<td>P_B1-CRIT-2</td>
 <td>10</td>
-<td>What does the town council believe the Repair ...</td>
-<td>Long-term sustainability and community spirit.</td>
+<td>How well does the text present both sides of t...</td>
+<td>It fairly presents concerns and benefits, show...</td>
 </tr>
 <tr>
 <th>8</th>
-<td>P_B1-CRIT-1</td>
+<td>P_B2-FR-1</td>
 <td>10</td>
-<td>How effective is the ending in showing the con...</td>
-<td>It shows no immediate closure, leaving the iss...</td>
+<td>What factor could influence the success of imp...</td>
+<td>Securing sufficient funding and cooperation wi...</td>
 </tr>
 <tr>
 <th>9</th>
-<td>P_B1-CRIT-3</td>
+<td>P_B2-FR-2</td>
 <td>10</td>
-<td>How effective is the example of Ms. Whitmore’s...</td>
-<td>It strengthens the argument by showing real op...</td>
+<td>How might the island’s natural environment be ...</td>
+<td>Construction and increased traffic could damag...</td>
 </tr>
 <tr>
 <th>10</th>
-<td>P_B2-INF-1</td>
+<td>P_B2-FR-3</td>
 <td>10</td>
-<td>What can be inferred about the islanders' prio...</td>
-<td>They value preserving their way of life over r...</td>
+<td>What change in travel time would a bridge brin...</td>
+<td>Reducing the journey from two hours to just fi...</td>
 </tr>
 <tr>
 <th>11</th>
-<td>P_B2-INF-2</td>
+<td>P_B2-INF-1</td>
 <td>10</td>
-<td>Why might the ferry upgrade be seen as more su...</td>
-<td>It is less expensive and helps protect the isl...</td>
+<td>What can be inferred about the islanders' atti...</td>
+<td>They are divided on whether to embrace modern ...</td>
 </tr>
 <tr>
 <th>12</th>
-<td>P_B2-INT-2</td>
+<td>P_B2-INF-3</td>
 <td>10</td>
-<td>How does the ferry advocacy group argue their ...</td>
-<td>It preserves the island's character and preven...</td>
+<td>Why might upgrading the ferry be seen as a com...</td>
+<td>It could improve access without harming the en...</td>
 </tr>
 <tr>
 <th>13</th>
-<td>P_B2-CRIT-1</td>
+<td>P_B2-INT-1</td>
 <td>10</td>
-<td>How effectively does the author use contrast t...</td>
-<td>It clearly emphasizes the tension between prog...</td>
+<td>Why might upgrading the ferry be considered a ...</td>
+<td>It could improve connections while protecting ...</td>
 </tr>
 <tr>
 <th>14</th>
-<td>P_B2-CRIT-2</td>
+<td>P_B2-INT-2</td>
 <td>10</td>
-<td>Why is the ending particularly impactful for t...</td>
-<td>It reinforces the deeper significance of the d...</td>
+<td>What concern do critics have about the bridge ...</td>
+<td>It could make the island feel less unique and ...</td>
 </tr>
 <tr>
 <th>15</th>
-<td>P_B2-CRIT-3</td>
+<td>P_B2-INT-3</td>
 <td>10</td>
-<td>How does the inclusion of a local historian st...</td>
-<td>It adds credible, personal insight that deepen...</td>
+<td>How could the decision to build a bridge or up...</td>
+<td>It could bring economic growth or preserve tra...</td>
 </tr>
 <tr>
 <th>16</th>
-<td>P_C1-FR-1</td>
+<td>P_B2-CRIT-1</td>
 <td>10</td>
-<td>What is the main reason quiet hours fail to im...</td>
-<td>Unpredictable and meaningful speech disrupts c...</td>
+<td>How effective is the text's ending in emphasiz...</td>
+<td>It effectively highlights the long-term impact...</td>
 </tr>
 <tr>
 <th>17</th>
-<td>P_C1-FR-2</td>
+<td>P_B2-CRIT-2</td>
 <td>10</td>
-<td>How do employees in open offices experience in...</td>
-<td>They face 19% more unplanned interactions daily.</td>
+<td>How well does the author balance opposing view...</td>
+<td>The author fairly presents both economic and e...</td>
 </tr>
 <tr>
 <th>18</th>
-<td>P_C1-FR-3</td>
+<td>P_B2-CRIT-3</td>
 <td>10</td>
-<td>What does the author suggest is the deeper iss...</td>
-<td>The lack of spatial and acoustic control in of...</td>
+<td>How does the structure support the argument ab...</td>
+<td>It builds tension by weighing options before l...</td>
 </tr>
 <tr>
 <th>19</th>
-<td>P_C1-INF-1</td>
+<td>P_C1-FR-1</td>
 <td>10</td>
-<td>What does the author imply about the effective...</td>
-<td>They provide only temporary relief and fail to...</td>
+<td>What is the primary reason open-plan offices h...</td>
+<td>They deny workers privacy and control over the...</td>
 </tr>
 <tr>
 <th>20</th>
-<td>P_C1-INF-2</td>
+<td>P_C1-FR-2</td>
 <td>10</td>
-<td>Why does the author argue that open-plan offic...</td>
-<td>Because unpredictable speech disrupts focus mo...</td>
+<td>How does the text describe the impact of quiet...</td>
+<td>They offer temporary relief but fail to resolv...</td>
 </tr>
 <tr>
 <th>21</th>
 <td>P_C1-INF-3</td>
 <td>10</td>
-<td>What does the text suggest about managerial at...</td>
-<td>They prioritize control over environment rathe...</td>
+<td>What does the author suggest is the true probl...</td>
+<td>The lack of privacy and control over one's cog...</td>
 </tr>
 <tr>
 <th>22</th>
-<td>P_C1-INT-1</td>
+<td>P_C1-CRIT-2</td>
 <td>10</td>
-<td>Why do quiet hours fail to reduce employee str...</td>
-<td>They increase unplanned interactions, causing ...</td>
+<td>Why is the argument strengthened by contrastin...</td>
+<td>It exposes the flaw in applying quiet hours un...</td>
 </tr>
 <tr>
 <th>23</th>
-<td>P_C1-INT-2</td>
-<td>10</td>
-<td>What does the text suggest is the real reason ...</td>
-<td>They don’t address semantic intrusion from unp...</td>
-</tr>
-<tr>
-<th>24</th>
-<td>P_C1-INT-3</td>
-<td>10</td>
-<td>How does the text characterize the quiet hour ...</td>
-<td>As a symbolic concession that avoids redesigni...</td>
-</tr>
-<tr>
-<th>25</th>
 <td>P_C1-CRIT-3</td>
 <td>10</td>
-<td>How does the author’s use of research enhance ...</td>
-<td>It strengthens credibility by showing limitati...</td>
+<td>How does the text's conclusion enhance its ove...</td>
+<td>It shifts from critique to solution, making th...</td>
 </tr>
 </tbody>
 </table>
@@ -9170,7 +9161,7 @@ round-robin through the passage × category groups, best-rated first, until <cod
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>26 of 26 accepted at score &gt;= 7
+<pre>22 of 24 accepted at score &gt;= 7
 </pre>
 </div>
 </div>
@@ -9204,73 +9195,73 @@ round-robin through the passage × category groups, best-rated first, until <cod
 <tbody>
 <tr>
 <th>0</th>
-<td>P_B1-FR-1</td>
+<td>P_B1-FR-2</td>
 <td>10</td>
-<td>What is the main goal of the Repair Café in Mi...</td>
-<td>To reduce waste and promote reusing household ...</td>
+<td>How often does the Repair Café operate at the ...</td>
+<td>Every Saturday afternoon</td>
 </tr>
 <tr>
 <th>1</th>
 <td>P_B1-INF-1</td>
 <td>10</td>
-<td>What is the main reason the Repair Café was st...</td>
-<td>To reduce waste and encourage reuse of items.</td>
+<td>Why might the Repair Café have a positive effe...</td>
+<td>It reduces waste by fixing broken items instea...</td>
 </tr>
 <tr>
 <th>2</th>
-<td>P_B1-INT-1</td>
+<td>P_B1-INT-2</td>
 <td>10</td>
-<td>Why might some shopkeepers see a short-term dr...</td>
-<td>Because people are fixing old items instead of...</td>
+<td>How might the Repair Café indirectly benefit E...</td>
+<td>By directing customers to buy spare parts at t...</td>
 </tr>
 <tr>
 <th>3</th>
 <td>P_B1-CRIT-1</td>
 <td>10</td>
-<td>How effective is the ending in showing the con...</td>
-<td>It shows no immediate closure, leaving the iss...</td>
+<td>How effective is the ending in showing the caf...</td>
+<td>It effectively shows lasting change in people'...</td>
 </tr>
 <tr>
 <th>4</th>
-<td>P_B2-INF-1</td>
+<td>P_B2-FR-1</td>
 <td>10</td>
-<td>What can be inferred about the islanders' prio...</td>
-<td>They value preserving their way of life over r...</td>
+<td>What factor could influence the success of imp...</td>
+<td>Securing sufficient funding and cooperation wi...</td>
 </tr>
 <tr>
 <th>5</th>
-<td>P_B2-INT-2</td>
+<td>P_B2-INF-1</td>
 <td>10</td>
-<td>How does the ferry advocacy group argue their ...</td>
-<td>It preserves the island's character and preven...</td>
+<td>What can be inferred about the islanders' atti...</td>
+<td>They are divided on whether to embrace modern ...</td>
 </tr>
 <tr>
 <th>6</th>
-<td>P_B2-CRIT-1</td>
+<td>P_B2-INT-1</td>
 <td>10</td>
-<td>How effectively does the author use contrast t...</td>
-<td>It clearly emphasizes the tension between prog...</td>
+<td>Why might upgrading the ferry be considered a ...</td>
+<td>It could improve connections while protecting ...</td>
 </tr>
 <tr>
 <th>7</th>
-<td>P_C1-FR-1</td>
+<td>P_B2-CRIT-1</td>
 <td>10</td>
-<td>What is the main reason quiet hours fail to im...</td>
-<td>Unpredictable and meaningful speech disrupts c...</td>
+<td>How effective is the text's ending in emphasiz...</td>
+<td>It effectively highlights the long-term impact...</td>
 </tr>
 <tr>
 <th>8</th>
-<td>P_C1-INF-1</td>
+<td>P_C1-FR-1</td>
 <td>10</td>
-<td>What does the author imply about the effective...</td>
-<td>They provide only temporary relief and fail to...</td>
+<td>What is the primary reason open-plan offices h...</td>
+<td>They deny workers privacy and control over the...</td>
 </tr>
 <tr>
 <th>9</th>
-<td>P_C1-INT-1</td>
+<td>P_C1-INF-3</td>
 <td>10</td>
-<td>Why do quiet hours fail to reduce employee str...</td>
-<td>They increase unplanned interactions, causing ...</td>
+<td>What does the author suggest is the true probl...</td>
+<td>The lack of privacy and control over one's cog...</td>
 </tr>
 </tbody>
 </table>
@@ -9355,16 +9346,16 @@ them verbatim; anything it invents is ignored.</li>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>P_B1-FR-1: 6 written, 6 after the gate
-P_B1-INF-1: 6 written, 3 after the gate
-P_B1-INT-1: 6 written, 6 after the gate
-P_B1-CRIT-1: 6 written, 3 after the gate
-P_B2-INF-1: 6 written, 3 after the gate
-P_B2-INT-2: 6 written, 6 after the gate
-P_B2-CRIT-1: 6 written, 3 after the gate
+<pre>P_B1-FR-2: 6 written, 6 after the gate
+P_B1-INF-1: 6 written, 6 after the gate
+P_B1-INT-2: 6 written, 6 after the gate
+P_B1-CRIT-1: 6 written, 6 after the gate
+P_B2-FR-1: 6 written, 6 after the gate
+P_B2-INF-1: 6 written, 6 after the gate
+P_B2-INT-1: 6 written, 4 after the gate
+P_B2-CRIT-1: 6 written, 6 after the gate
 P_C1-FR-1: 6 written, 6 after the gate
-P_C1-INF-1: 6 written, 4 after the gate
-P_C1-INT-1: 6 written, 5 after the gate
+P_C1-INF-3: 6 written, 6 after the gate
 </pre>
 </div>
 </div>
@@ -9426,75 +9417,75 @@ text. The export is one JSON file with the passages and the items — Notebook 3
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>[P_B1-FR-1] What is the main goal of the Repair Café in Millbrook?
-     A) To attract tourists to Millbrook by promoting unique community activities.
-     B) To increase sales at local stores by encouraging residents to buy new products.
-   * C) To reduce waste and promote reusing household items.
-     D) To replace the town’s waste disposal system with a volunteer-run recycling program.
-   -&gt; The main goal of the Repair Café is to reduce waste and promote reusing household items because the text explicitly states, 'The idea behind the Repair Café is to reduce waste and encourage people to reuse what they already own.' This directly supports the correct answer, showing that the café's purpose is centered on sustainability through repair rather than disposal. 
+<pre>[P_B1-FR-2] How often does the Repair Café operate at the community hall?
+   * A) Every Saturday afternoon
+     B) Every Sunday morning
+     C) On the first and third Saturdays of each month
+     D) Twice a week on Tuesdays and Fridays
+   -&gt; The text states, 'Every Saturday afternoon, people bring broken items—like toasters, lamps, or torn clothes—to the community hall,' which directly supports the correct answer that the Repair Café operates every Saturday afternoon. This sentence provides clear evidence of the café's regular schedule, confirming its weekly operation on Saturdays in the afternoon. 
 
-[P_B1-INF-1] What is the main reason the Repair Café was started?
-     A) To help local shopkeepers increase their sales by promoting repairs instead of new purchases.
-   * B) To reduce waste and encourage reuse of items.
-     C) To replace the town’s recycling program with a system of in-person repairs.
-     D) To train young people in professional repair jobs for future careers.
-   -&gt; The main reason the Repair Café was started is to reduce waste and encourage reuse of items, as directly stated in the text: 'The idea behind the Repair Café is to reduce waste and encourage people to reuse what they already own.' This purpose is further supported by the fact that the café helps residents repair broken items instead of throwing them away, which saves money and reduces environmental impact. 
+[P_B1-INF-1] Why might the Repair Café have a positive effect on the environment?
+     A) It causes more pollution because repaired items are less safe to use.
+     B) It increases the number of discarded items because people bring broken things to be repaired.
+     C) It promotes the use of more energy by requiring volunteers to travel to the community hall.
+   * D) It reduces waste by fixing broken items instead of throwing them away.
+   -&gt; The Repair Café reduces waste by fixing broken items instead of throwing them away, which directly supports environmental goals by keeping usable items out of landfills. The text states, 'The aim is to reduce waste and help residents save money,' providing clear evidence that the café's primary environmental benefit is waste reduction through repair. 
 
-[P_B1-INT-1] Why might some shopkeepers see a short-term drop in sales due to the Repair Café?
-   * A) Because people are fixing old items instead of buying new ones.
-     B) Because the café charges high fees for repairs, making new items seem cheaper.
-     C) Because the café discourages people from shopping by hosting events on weekends.
-     D) Because the café sells new household goods at lower prices than local shops.
-   -&gt; The correct answer is right because the text states that people are bringing broken items to the Repair Café to be fixed instead of replacing them, which reduces the need to buy new household goods. This is directly supported by the evidence: 'fewer people are buying new household goods from her shop because they are fixing old ones instead.' This shows that the shift from buying new to repairing old items leads to a short-term drop in sales for shopkeepers. 
+[P_B1-INT-2] How might the Repair Café indirectly benefit Ellis &amp; Co.?
+   * A) By directing customers to buy spare parts at the shop.
+     B) By encouraging residents to buy new appliances instead of repairing them.
+     C) By increasing the number of people who visit the community hall each week.
+     D) By reducing the need for customers to repair items at the shop.
+   -&gt; The Repair Café might indirectly benefit Ellis &amp; Co. because the town council's compromise suggests that the café could share information about the shop and promote responsible shopping, which could lead customers to purchase spare parts there. The text states, 'In return, the shop could offer discounts on spare parts for repaired items,' indicating that repaired items often require replacement parts, creating a new source of business for the hardware store. 
 
-[P_B1-CRIT-1] How effective is the ending in showing the conflict's resolution?
-     A) It resolves the conflict by forcing the café to stop operating on Saturdays.
-     B) It resolves the conflict by granting the shopkeeper’s request to close the café.
-     C) It resolves the conflict by proving the café caused significant harm to local businesses.
-   * D) It shows no immediate closure, leaving the issue open.
-   -&gt; The correct answer is right because the text states, 'The council is reviewing the situation carefully but has no immediate plans to close the Repair Café,' which shows that the conflict has not been resolved and the café remains open for now. This evidence demonstrates that the ending does not provide a definitive resolution, instead leaving the issue unresolved and open for future consideration. 
+[P_B1-CRIT-1] How effective is the ending in showing the café's impact on the community?
+     A) It demonstrates that the café has caused significant financial harm to local businesses like Ellis &amp; Co.
+   * B) It effectively shows lasting change in people's attitudes toward repair.
+     C) It illustrates that the Repair Café has replaced the need for local shops like Ellis &amp; Co.
+     D) It shows that the Repair Café has failed to change anyone’s behavior regarding waste or repair.
+   -&gt; The ending effectively shows lasting change in people's attitudes toward repair because it states, 'the Repair Café has already changed how many residents think about repairing rather than discarding things,' which directly demonstrates a shift in mindset that goes beyond just fixing items. This evidence proves the café's impact is not just temporary or practical, but deeply influential on community values and habits. 
 
-[P_B2-INF-1] What can be inferred about the islanders' priorities based on the debate?
-     A) They are united in their desire to eliminate the ferry service in favor of a faster, more modern connection to the mainland.
-     B) They believe that environmental concerns are irrelevant compared to the benefits of improved transportation.
-     C) They prioritize economic growth above all else, as shown by their support for the bridge proposal.
-   * D) They value preserving their way of life over rapid development.
-   -&gt; The islanders' priorities are reflected in the strong emphasis on maintaining the island's isolation and natural beauty, as highlighted by local historian Eleanor Finch, who warns that a bridge would 'irrevocably alter the island's character and strain its pristine ecosystem.' This concern for environmental and cultural preservation, coupled with the Ferry Advocates' argument that increased accessibility could lead to 'overdevelopment' threatening the 'tranquil lifestyle cherished by many islanders,' shows that they value their traditional way of life over rapid economic growth. 
+[P_B2-FR-1] What factor could influence the success of improving the ferry service?
+   * A) Securing sufficient funding and cooperation with mainland officials
+     B) The current price of property on the mainland
+     C) The frequency of ferry delays due to weather conditions
+     D) The number of rare seabirds nesting on the island each year
+   -&gt; The text states that upgrading the ferry system 'depends on local leaders negotiating with mainland authorities and securing enough funding,' which directly supports the correct answer. This evidence shows that both financial resources and collaboration with external officials are essential factors for the success of the ferry improvement plan. 
 
-[P_B2-INT-2] How does the ferry advocacy group argue their proposal supports long-term island values?
-     A) It eliminates the need for any future infrastructure projects, ensuring long-term stability.
-     B) It guarantees a permanent reduction in tourism, protecting the island’s quiet lifestyle from outsiders.
-   * C) It preserves the island's character and prevents overdevelopment.
-     D) It prevents the island from becoming a target for environmental regulation due to its isolation.
-   -&gt; The ferry advocacy group argues their proposal supports long-term island values because they believe a bridge would irrevocably alter the island's character and threaten its pristine ecosystem, as stated by local historian Eleanor Finch, who emphasizes the island's thriving marine biodiversity and the charm of arriving by sea as irreplaceable assets. Additionally, they warn that increased accessibility from a bridge might lead to overdevelopment, which would endanger the tranquil lifestyle cherished by many islanders, thus preserving the island's unique identity and way of life. 
+[P_B2-INF-1] What can be inferred about the islanders' attitude toward change?
+   * A) They are divided on whether to embrace modern development.
+     B) They are eager to become a part of the mainland's urban sprawl and welcome increased development.
+     C) They believe the ferry system is outdated and should be replaced entirely with a bridge.
+     D) They view the bridge as a necessary step to preserve their traditional way of life.
+   -&gt; The text shows that islanders are split on the issue of modern development: some support the bridge for economic growth and convenience, while others oppose it due to environmental and cultural concerns. This division is evident when it states, 'Those in favor of the bridge say it would bring significant economic growth' and 'critics are concerned about the environmental and cultural impacts,' showing conflicting attitudes toward change. 
 
-[P_B2-CRIT-1] How effectively does the author use contrast to highlight the central conflict?
-   * A) It clearly emphasizes the tension between progress and preservation.
-     B) It minimizes the significance of the island's environmental concerns by portraying them as outdated fears.
-     C) It portrays the ferry option as inherently superior due to its lower cost and environmental benefits.
-     D) It presents the bridge as the only viable solution for ensuring reliable transportation during storms.
-   -&gt; The author uses contrast effectively by juxtaposing the bridge advocates' focus on economic growth, reduced travel time, and reliability against the ferry supporters' emphasis on environmental protection, cultural preservation, and cost efficiency. This is evidenced by the passage stating, 'While one side envisions a future of prosperity and connectivity, the other sees a premonition of change that could dilute the very essence of island life,' which directly illustrates the central conflict between progress and preservation. 
+[P_B2-INT-1] Why might upgrading the ferry be considered a better option than building a bridge?
+   * A) It could improve connections while protecting the environment.
+     B) It would allow the island to become more self-sufficient by cutting off all mainland connections.
+     C) It would guarantee that property prices would remain low and prevent wealthy developers from moving in.
+     D) It would reduce travel time to just five minutes, making it faster than a bridge.
+   -&gt; Upgrading the ferry could improve connections while protecting the environment because it would allow for better transportation links without the ecological damage caused by bridge construction and increased traffic, which could harm the island's fragile ecosystem and rare wildlife. The text states that critics are concerned about 'the environmental and cultural impacts' of a bridge, including harm to 'rare seabirds and protected marine life,' suggesting that a ferry upgrade avoids these risks while still addressing connectivity. 
 
-[P_C1-FR-1] What is the main reason quiet hours fail to improve focus in open-plan offices?
-     A) Quiet hours fail because employees are too accustomed to background noise and cannot adapt to sudden silence.
-     B) Quiet hours fail because employees use headphones to listen to music, which distracts them more than conversation.
-     C) Quiet hours fail because they are too short to allow for meaningful deep work sessions.
-   * D) Unpredictable and meaningful speech disrupts concentration more than noise levels alone.
-   -&gt; The text states that 'it is the unpredictability and semantic content of speech that disrupt working memory,' which directly supports the idea that meaningful, unexpected conversations are more disruptive than mere noise levels. This is further reinforced by the claim that 'a snippet of a sales pitch or a casual joke can shatter immersion far more effectively than ambient hum,' proving that the content and unpredictability of speech are the core issues, not just decibel levels. 
+[P_B2-CRIT-1] How effective is the text's ending in emphasizing the importance of the decision?
+     A) It dismisses environmental concerns by implying that economic growth outweighs ecological risks.
+     B) It downplays the community’s role by suggesting the outcome is inevitable regardless of their choice.
+   * C) It effectively highlights the long-term impact on identity and future choices.
+     D) It minimizes the significance of the decision by focusing only on short-term travel improvements.
+   -&gt; The text's ending emphasizes the importance of the decision by stating, 'Whatever the decision, it will shape the Isle of Meridian for many years to come, determining whether the island embraces the future or holds onto its past.' This quote shows that the choice between a bridge and a ferry is not just about transportation, but about the island's long-term identity and direction. By framing the decision as a defining moment between progress and tradition, the ending effectively underscores its lasting significance. 
 
-[P_C1-INF-1] What does the author imply about the effectiveness of quiet hours in improving employee well-being?
-     A) They allow managers to avoid making costly changes to office design while still addressing employee needs.
-     B) They are scientifically proven to enhance memory and reading comprehension for all types of workers.
-     C) They are widely embraced by employees as a sustainable solution to workplace distractions.
-   * D) They provide only temporary relief and fail to reduce overall stress.
-   -&gt; The author implies that quiet hours are ineffective in improving employee well-being because, while they offer short-term relief, they do not reduce overall stress levels—evidence from the text states, 'While employees report short-term relief during quiet hours, overall stress levels have not decreased.' Furthermore, the text notes that workers in open environments experience '19% more unplanned interactions per day,' which contributes to cognitive overload and undermines any benefits from quiet hours, reinforcing that these measures fail to address the root problem. 
+[P_C1-FR-1] What is the primary reason open-plan offices hinder focus, according to the text?
+   * A) They deny workers privacy and control over their cognitive environment.
+     B) They force employees to work longer hours without breaks.
+     C) They increase the frequency of formal meetings, disrupting workflow.
+     D) They reduce access to digital collaboration tools during quiet hours.
+   -&gt; The text states that 'the fundamental issue is not cacophony itself, but the deliberate architectural denial of privacy and cognitive control that open-plan layouts enforce,' which directly supports the correct answer by identifying the core problem as the lack of privacy and control over one's mental environment. This is further reinforced by the claim that 'distraction is not merely an environmental noise issue, but a structural failure to respect cognitive boundaries,' confirming that the root cause lies in the design's disregard for workers' mental autonomy. 
 
-[P_C1-INT-1] Why do quiet hours fail to reduce employee stress despite short-term relief, according to the text?
-     A) They are too short to have a meaningful impact on daily stress levels.
-   * B) They increase unplanned interactions, causing cognitive overload.
-     C) They reduce collaboration, which negatively impacts team morale over time.
-     D) They rely on employees’ self-discipline, which is inconsistent and unreliable.
-   -&gt; The text states that a longitudinal study by Steelcase revealed workers in open environments experienced 19% more unplanned interactions per day compared to those in private offices, leading to cognitive overload and reduced task persistence. This increase in unplanned interactions, even during quiet hours, undermines any short-term relief and contributes to sustained stress, showing that quiet hours fail to address the root cause of stress in open-plan offices. 
+[P_C1-INF-3] What does the author suggest is the true problem with open-plan offices?
+     A) Employees being required to work longer hours than in traditional office setups.
+     B) The absence of sufficient natural light in most open-plan offices.
+     C) The high cost of installing soundproofing materials in office buildings.
+   * D) The lack of privacy and control over one's cognitive environment.
+   -&gt; The author suggests the true problem with open-plan offices is the 'deliberate architectural denial of privacy and cognitive control' that these layouts enforce, as stated directly in the text: 'The fundamental issue is not cacophony itself, but the deliberate architectural denial of privacy and cognitive control that open-plan layouts enforce.' This evidence shows that the core issue is not just noise, but the absence of personal control over one’s work environment. Furthermore, the text reinforces this by explaining how constant distractions—like overhearing conversations or visual interruptions—create a state of 'persistent alertness' that impairs focus, proving that the problem stems from a lack of cognitive autonomy, not just background noise. 
 
 </pre>
 </div>
@@ -9645,7 +9636,7 @@ context — the numbers are checked afterwards and the template stem is kept if 
      D) 11 %
    misconceptions: {'B': 'absolute difference', 'C': 'remaining fraction', 'D': 'wrong base'} 
 
-[M-07] A lamp originally costs €120, but is now on sale for €108. By what percentage has the price of the lamp decreased?
+[M-07] A lamp originally costs €120 in a shop. The price is reduced to €108. By what percentage has the price of the lamp decreased?
      A) 12 %
    * B) 10 %
      C) 90 %
@@ -9666,7 +9657,7 @@ context — the numbers are checked afterwards and the template stem is kept if 
    * D) 40 %
    misconceptions: {'A': 'absolute difference', 'B': 'remaining fraction', 'C': 'wrong base'} 
 
-[M-11] A pair of headphones originally cost €60 in a shop. The price has been reduced to €45. What is the percentage decrease in the price?
+[M-11] A pair of headphones was originally priced at €60 in a shop. After a sale, the price dropped to €45. What is the percentage decrease in the price of the headphones?
    * A) 25 %
      B) 75 %
      C) 15 %
